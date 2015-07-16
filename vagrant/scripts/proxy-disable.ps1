@@ -27,7 +27,7 @@ function Disable-AutomaticallyDetectProxySettings
     }
 }
 
-$job = Start-Job -ScriptBlock { Start-Process "C:\Program Files\Internet Explorer\iexplore.exe" -Wait -PassThru }
+$job = Start-Job -ScriptBlock { Start-Process "C:\Program Files\Internet Explorer\iexplore.exe" -WindowStyle Minimized -Wait -PassThru }
 Start-Sleep -Seconds 5
 Stop-Job -Id $job.Id
 
